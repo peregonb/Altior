@@ -4,7 +4,7 @@ $(document).ready(function(){
   });
 });
 $(function(){
- var shrinkHeader = 300;
+ var shrinkHeader = 1;
   $(window).scroll(function() {
     var scroll = getCurrentScroll();
       if ( scroll >= shrinkHeader ) {
@@ -17,4 +17,5 @@ $(function(){
 function getCurrentScroll() {
     return window.pageYOffset || document.documentElement.scrollTop;
     }
+
 });

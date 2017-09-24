@@ -8,12 +8,49 @@
 }
 
 @media only screen and (max-width: 992px) {
-	
+	.index-header {
+    font-size: 75px*0.8;
+    line-height: 78px*0.8;
+    padding: 0 5%;
+}
+.index-desc {
+    font-size: 19px*0.8;
+    line-height: 27px*0.8;
+}
 }
 
 
 @media only screen and (max-width: 768px) {
-	
+	.pre-headerContent{
+		margin: 0;
+		width: 100vw;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.hamburger {
+    display: flex;
+}
+.header-right{
+	display: none;
+}
+.header-second{
+	width: 100%;
+}
+.header{
+	padding: 0;
+}
+	.index-header {
+    font-size: 75px*0.5;
+    line-height: 78px*0.5;
+    padding: 0 5%;
+        margin-top: 30px;
+}
+.index-desc {
+    font-size: 19px*0.8;
+    line-height: 27px*0.8;
+
+}
 }
 
 
