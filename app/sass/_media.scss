@@ -4,7 +4,10 @@
 /*==========  Desktop First  ==========*/
 
 @media only screen and (max-width: 1200px) {
-	
+	.production-block-header {
+    font-size: 40px*0.9;
+    line-height: 44px*0.9;
+}
 }
 
 @media only screen and (max-width: 992px) {
@@ -16,6 +19,15 @@
 .index-desc {
     font-size: 19px*0.8;
     line-height: 27px*0.8;
+}
+.production-block{
+	padding: 50px 80px 30px 60px;
+}
+.dis9{
+	display: none;
+}
+.production-block-hr {
+    margin-bottom: 7px;
 }
 }
 
@@ -55,8 +67,19 @@
 
 
 @media only screen and (max-width: 480px) {
-	
+	.index-button-img {
+		width: 160px*0.8;
+		height: 56px*0.8;
+		margin: 0;
+	}
+	.index-button-stack{
+		justify-content: space-between;
+		padding: 0;
+		width: 100%;
+	}
+
 }
+
 
 
 @media only screen and (max-width: 320px) {

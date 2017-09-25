@@ -118,6 +118,7 @@ html {
     position: relative;
 @include flexCenter;
     flex-direction: column;
+    position: relative;
 }
 
 
@@ -305,7 +306,7 @@ transition: 300ms;
 .index-header {
     text-shadow: 2px 3.5px 4.8px rgba(0, 0, 0, 0.1);
     color: white;
-    font-family: "PT Sans";
+    font-family: 'PT Sans', sans-serif;
     font-size: 75px;
     font-weight: 700;
     line-height: 78px;
@@ -316,16 +317,111 @@ transition: 300ms;
 .index-desc {
     text-shadow: 2px 3.5px 4.8px rgba(0, 0, 0, 0.1);
     color: #e3e4e6;
-    font-family: "PT Sans";
+    font-family: 'PT Sans', sans-serif;
     font-size: 19px;
     font-weight: 400;
     line-height: 27px;
     text-transform: uppercase;
 }
-
-
-
-
+.index-button-stack{
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+.index-button-img {
+    display: flex;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.index-bg2{
+    background-image: linear-gradient(162deg, #d66696 0%, white 54%, white 67%, white 100%);
+    display: flex;
+    flex-direction: row;
+}
+.production{
+    display: flex;
+    flex-direction: column; 
+        height: auto;
+    min-height: 1320px;
+    padding: 0;
+    box-shadow: 8px 13.9px 65.5px 6.5px rgba(0, 0, 0, 0.32);  
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.production-block-double{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+}
+.production-block {
+    background: #fff;
+    height: 330px;
+    width: 50%;
+    padding: 60px 90px 40px 90px;
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+}
+.production-img{
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+}
+.production-img1{
+    background-image: url(../img/c1.png);
+}
+.production-img2{
+    background-image: url(../img/c2.png);
+}
+.production-img3{
+    background-image: url(../img/c3.png);
+}
+.production-img4{
+    background-image: url(../img/c4.png);
+}
+.production-block-header {
+    color: rgb(152, 39, 142);
+    font-family: 'PT Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 44px;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    background-image: -webkit-linear-gradient(left, rgb(152, 39, 142), rgb(234, 33, 124));
+    -webkit-text-fill-color: transparent;
+}
+.production-block-description {
+    color: #373e4f;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-top: 20px;
+}
+.production-block-hr {
+    height: 3px;
+    opacity: 0.75;
+    background-color: #ea217c;
+    background-image: linear-gradient(-2deg, #ea217c 0%, #98278e 100%);
+    margin-top: 50px;
+    margin-bottom: 7px;
+}
+.production-block-excerpt {
+    color: #312f63;
+    font-family: "PT Sans";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+.excerpt-block {
+    position: absolute;
+    bottom: 40px;
+    width: 250px;
+}
 
 
 
