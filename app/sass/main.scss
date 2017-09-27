@@ -56,6 +56,7 @@ body {
     font-family: $default-font;
     overflow-x: hidden;
     opacity: 1;
+    transition: 300ms !important;
 }
 
 .img-responsive {
@@ -67,6 +68,7 @@ body {
 body {
     overflow-x: hidden;
     outline: none;
+    height: auto;
 }
 
 html {
@@ -91,11 +93,17 @@ html {
 }
 
 .header.shrink {
-    height: 100px;
+    height: 60px;
     line-height: 80px;
     top: 0;
 }
-
+.header-left{
+    transition: 300ms;
+}
+.shrink .header-left {
+    transition: .3s;
+    display: none;
+}
 .header h1 {
     font-size: 30px;
     font-weight: normal;
@@ -184,7 +192,7 @@ width: 35%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    cursor: pointer
+    cursor: pointer;
 }
 .header-phone {
     font-family: 'PT Sans', sans-serif;
@@ -226,6 +234,7 @@ width: 35%;
     width: 60%;
 }
 .shrink .header-second{
+    height: 60px;
     margin-top: 0;
     transition: 300ms;
 }
@@ -264,13 +273,27 @@ i.fa.fa-phone {
     justify-content: space-between;
     transition: 300ms;
     align-items: center;
+        -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
 }
 .menu-item:hover {
 color: #c72383;
 transition: 300ms;
 }
+.menu-item-current {
+color: #c72383;
+transition: 300ms;
+}
 .menu-item{
     margin-left: 25px;
+}
+.hamburger {
+    @include flexCenter;
+    flex-direction: column;
+    display: none;
+    z-index: 2000;
 }
 .hamburger .line {
     width: 42px;
@@ -306,11 +329,6 @@ transition: 300ms;
   -o-transform: translateY(-14px) rotate(-45deg);
   transform: translateY(-14px) rotate(-45deg);
 }
-.hamburger {
-    @include flexCenter;
-    flex-direction: column;
-    display: none;
-}
 .index-header {
     text-shadow: 2px 3.5px 4.8px rgba(0, 0, 0, 0.1);
     color: white;
@@ -332,8 +350,8 @@ transition: 300ms;
     text-transform: uppercase;
 }
 .index-button-stack{
-    position: absolute;
-    bottom: 20px;
+    z-index: 99;
+    right: 20px;
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
@@ -399,6 +417,7 @@ transition: 300ms;
     -webkit-background-clip: text;
     background-image: -webkit-linear-gradient(left, rgb(152, 39, 142), rgb(234, 33, 124));
     -webkit-text-fill-color: transparent;
+    cursor: pointer;
 }
 .production-block-description {
     color: #373e4f;
@@ -644,6 +663,7 @@ input.dispatch-input {
     height: 30px;
     line-height: 36px;
     margin-bottom: 0;
+    align-items: flex-end;
 }
 .contact-item-description {
 margin-bottom: 0;
@@ -654,9 +674,7 @@ margin-bottom: 0;
     height: 100%;
     justify-content: space-between;
 }
-.contacts-item {
-    align-items: center;
-}
+
 .footer-fa {
     font-size: 18px;
     color: #b3b3b3;
@@ -692,6 +710,213 @@ display: none;
 display: flex;
     justify-content: flex-end;
 }
+.index-button-img{
+    height: 56px !important;
+    width: 56px !important;
+    transition: 300ms;
+}
+.index-button-img:nth-child(1){
+    background-image: url(../img/1s.png);
+    background-size: cover;
+}
+.index-button-img:nth-child(1):hover{
+    background-image: url(../img/index-b1.png);
+    background-size: cover;
+    width: 160px !important;
+    transition: 300ms;
+}
+.index-button-img:nth-child(2){
+    background-image: url(../img/2s.png);
+    background-size: cover;
+}
+.index-button-img:nth-child(2):hover{
+    background-image: url(../img/index-b2.png);
+    background-size: cover;
+    width: 160px !important;
+    transition: 300ms;
+}
+.body-wrapper{
+    position: relative;
+}
+.main-menu {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 1001;
+    background-color: #0e081d;
+}
+.main-menu {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    color: #0e081d;
+    z-index: 999;
+    font-family: 'PT Sans',sans-serif;
+    font-size: 8vw;
+    font-weight: 600;
+    display: flex;
+    line-height: 17vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,245,250,0.975);
+}
+.main-menu-item {
+    color: white;
+    text-shadow: 0 1px 1px #c72383;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.main-menu-item:hover{
+    color: #c72383;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.main-menu-item-current{
+    color: #c72383;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+$green:                 #1EC692;
+$black:                 #333;
+
+$color-primary:     $green;
+$color-text:        $black;
+
+
+
+.breadcrumb {
+    border: 1px solid $color-primary;
+    border-radius: 0.25em;
+    margin-bottom: 1.5em;
+    max-height: 2.5em;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    
+    a {
+        display: block;
+        padding: 0.7em 1.4em;
+    }
+    
+    // When dropdown is active
+    &:target {
+        max-height: 20em;
+
+        .breadcrumb-link {
+            opacity: 1;
+            position: static;
+            visibility: visible;
+        }
+    
+        .breadcrumb--active:after { content: none; }
+        
+        // Not overriding on IE9
+        .breadcrumb-close:after { visibility: visible; }
+    
+    }
+    
+}
+
+    .breadcrumb-link {
+        color: tint($color-primary, 35%);
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        transition: all 0.2s;
+        z-index: 0;
+    }
+
+    .breadcrumb--active {
+        color: $color-primary;
+        font-weight: 700;
+        position: relative;
+
+        &:after {
+            content: '\25BE';
+            position: absolute;
+            right: 22px;
+            z-index: 1;
+        }
+
+    }
+
+    .breadcrumb-close {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        visibility: hidden;
+        z-index: 10;
+
+        &:after {
+            content: '\25B4';
+            color: $color-primary;
+        }
+
+    }
+
+@media (min-width: 700px) {
+    
+    .breadcrumb {
+        border: none;
+    
+        a {
+            display: inline;
+            padding: 0.5em;
+        }
+        
+    }
+    
+        .breadcrumb-link {
+            display: inline;
+            opacity: 1;
+            visibility: visible;
+            position: static;
+            
+            &:after {
+                content: '/';
+                margin-left: 0.5em;
+                margin-right: -0.75em;
+            }
+            
+        }
+    
+        .breadcrumb--active {
+            pointer-events: none;
+            
+            &:after { content: none; }
+            
+        }
+    
+        .breadcrumb-close { display: none !important; }
+    
+}
+.blog-container {
+    padding: 0;
+    margin-top: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
