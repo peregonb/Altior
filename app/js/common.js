@@ -17,16 +17,16 @@ $(function() {
         var scroll = getCurrentScroll();
         if (scroll >= shrinkHeader) {
             $('.header').addClass('shrink');
-            $('.blog-container').css({
-                'margin-top': '90px',
-                'transition': '300ms'
-            });
+            // $('.blog-container').css({
+            //     'margin-top': '90px',
+            //     'transition': '300ms'
+            // });
         } else {
             $('.header').removeClass('shrink');
-            $('.blog-container').css({
-                'margin-top': '150px',
-                'transition': '300ms'
-            });
+            // $('.blog-container').css({
+            //     'margin-top': '150px',
+            //     'transition': '300ms'
+            // });
         }
     });
 
@@ -36,9 +36,10 @@ $(function() {
 
 });
 
-$(document).ready(function() {
-    $(window).scroll(function footerPosition() {
-        var Fh = $('.footer').height();
+
+
+function SocialButton() {
+  var Fh = $('.footer').height();
         var AFh = $('.afterfooter').height();
         var Bh = $('body').height();
         var Bh2 = $(window).outerHeight();
@@ -53,24 +54,14 @@ $(document).ready(function() {
         } else {
             $('.index-button-stack').css("top", bo + Bh2 - 80);
             $('.index-button-stack').css("position", "absolute").height(56);
-        }
+        };
+};
+
+$(document).ready(function() {
+    $(window).scroll(function footerPosition() {
+    SocialButton();   
     });
-    var Fh = $('.footer').height();
-    var AFh = $('.afterfooter').height();
-    var Bh = $('body').height();
-    var Bh2 = $(window).outerHeight();
-    var Hh = $('.header').height();
-    var Fw = $('.footer-wrapper').height();
-    var AllFh = Fh + AFh;
-    var bo = $(window).scrollTop();
-    if (bo > Bh - Bh2 - AllFh - Hh) {
-        $('.index-button-stack').removeAttr('style');
-        $('.index-button-stack').css("bottom", 20);
-        $('.index-button-stack').css("position", "absolute").height(56);
-    } else {
-        $('.index-button-stack').css("top", bo + Bh2 - 80);
-        $('.index-button-stack').css("position", "absolute").height(56);
-    }
+    SocialButton();
 });
 
 
@@ -78,7 +69,15 @@ $(document).ready(function() {
 
 
 
-
+function calcVH() {
+    $('.index-bg').innerHeight( $(this).innerHeight() );
+}
+(function($) { 
+  calcVH();
+  $(window).on('orientationchange', function() {
+    calcVH();
+  });
+})(jQuery);
 
 
 
