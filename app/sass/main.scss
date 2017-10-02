@@ -131,7 +131,7 @@ html {
 
 .index-bg {
     height: 100vh;
-    background-image: url(../img/bg1.png);
+    // background-image: url(../img/bg1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -139,6 +139,7 @@ html {
     @include flexCenter;
     flex-direction: column;
     position: relative;
+    padding: 0;
 }
 
 
@@ -372,6 +373,7 @@ i.fa.fa-phone {
     text-transform: uppercase;
     text-align: center;
     padding: 0 5%;
+    z-index: 11;
 }
 
 .index-desc {
@@ -382,6 +384,7 @@ i.fa.fa-phone {
     font-weight: 400;
     line-height: 27px;
     text-transform: uppercase;
+    z-index: 11;
 }
 
 .index-button-stack {
@@ -1096,11 +1099,130 @@ $HeaderLetSp: 44px;
     font-weight: 700;
     transition: 300ms;
 }
+.recall-block {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: auto;
+    width: 480px;
+    margin-left: -240px;
+    margin-top: -100px;
+    z-index: 201;
+}
+.recontact-block {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: auto;
+    width: 480px;
+    margin-left: -240px;
+    margin-top: -100px;
+    z-index: 201;
+}
+.click-capture{
+    z-index: 200;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.recall-block-header {
+    font-size: 19px;
+    line-height: 27px;
+    font-family: 'PT Sans',sans-serif;
+    text-transform: uppercase;
+    color: #373e4f;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px 50px;
+}
+.recall-cross {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+form.recall-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px 10px 50px;
+}
+.recall-input {
+    border: none;
+    padding: 2px 15px 2px 15px;
+    height: 34px;
+    outline: 0;
+    font-family: 'PT Sans',sans-serif;
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 10px;
+}
+.recall-submit {
+    background-color: #ea217c;
+    background-image: -webkit-linear-gradient(left,#98278e,#ea217c);
+    border: none;
+    outline: none;
+    color: white;
+    height: 40px;
+    font-family: 'PT Sans',sans-serif;
+    width: 120px;
+    margin: 0 auto;
+    padding: 0;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    transition: 300ms;
+}
+.recall-textarea{
+    height: 64px;
+}
 
-
-
-
-
+// VIDEO
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 10;
+    // height: 100vh;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
 
 
 

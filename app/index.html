@@ -68,15 +68,33 @@
             <a href="blog.html" class="main-menu-item">БЛОГ</a>
             <a href="#" class="main-menu-item">KОНТАКТЫ</a>
         </div>
-        <div class="container-fluid index-bg">
+        <div class="homepage-hero-module">
+            <div class="video-container">
+                <div class="filter"></div>
+                <video autoplay loop class="fillWidth">
+                    <source src="./video/altior.mp4" type="video/mp4" />
+                    <!-- <source src="PATH_TO_WEBM" type="video/webm"/> -->
+                </video>
+                <div class="container-fluid index-bg">
+                    <div class="index-desc">Широкоформатная</div>
+                    <div class="index-header">Фотопечать
+                        <br>на натяжных потолках
+                    </div>
+                </div>
+                <div class="poster hidden">
+                    <img src="./img/bg1.png" alt="">
+                </div>
+            </div>
+        </div>
+<!--         <div class="container-fluid index-bg">
             <div class="index-desc">Широкоформатная</div>
             <div class="index-header">Фотопечать
                 <br>на натяжных потолках
             </div>
-        </div>
+        </div> -->
         <div class="index-button-stack">
-            <div class="index-button-img"> </div>
-            <div class="index-button-img"> </div>
+            <div class="index-button-img" id="recontactOn"> </div>
+            <div class="index-button-img" id="recallOn"> </div>
         </div>
         <div class="container-fluid index-bg2">
             <div class="production container">
@@ -227,6 +245,27 @@
                 <div class="afterfooler-r afterfooler-content">Created by&nbsp;<a href="igmish.com">igmish.com</a></div>
             </div>
         </div>
+    </div>
+    <div class="click-capture" id="close-popup"></div>
+    <div class="recall-block">
+        <div class="recall-block-header">Закажите обратный звонок и наш менеджер свяжется с вами</div>
+        <i class="fa fa-times recall-cross" id="close-popup" aria-hidden="true"></i>
+        <form action="" class="recall-form">
+            <input type="text" class="reacll-name recall-input" placeholder="Ваше имя">
+            <input type="number" class="recall-phone recall-input" placeholder="Ваш номер телефона">
+            <button class="recall-submit" type="submit">Заказать</button>
+        </form>
+    </div>
+    <div class="recontact-block">
+        <div class="recall-block-header">Оформить заявку на замер</div>
+        <i class="fa fa-times recall-cross" id="close-popup" aria-hidden="true"></i>
+        <form action="" class="recall-form recontact-form">
+            <input type="text" class="reacll-name recall-input" placeholder="Ваше имя">
+            <input type="number" class="recall-phone recall-input" placeholder="Ваш номер телефона">
+            <input type="email" class="recall-email recall-input" placeholder="Ваш электронный адресс">
+            <textarea type="text" rowspan="2" class="recall-textarea recall-input" placeholder="Оставить комментарий"></textarea>
+            <button class="recall-submit recontact-submit" type="submit">Отправить</button>
+        </form>
     </div>
     <link rel="stylesheet" href="css/main.min.css">
     <script src="js/scripts.min.js"></script>
