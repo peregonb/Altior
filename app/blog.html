@@ -50,9 +50,9 @@
             </div>
             <div class="header-right">
                 <a href="index.html" class="menu-item">ГЛАВНАЯ</a>
-                <a href="#" class="menu-item">ПРОДУКЦИЯ</a>
-                <a href="#" class="menu-item menu-item-current">БЛОГ</a>
-                <a href="#" class="menu-item">KОНТАКТЫ</a>
+                <a href="production.html" class="menu-item">ПРОДУКЦИЯ</a>
+                <a href="blog.html" class="menu-item menu-item-current">БЛОГ</a>
+                <a href="contacts.html" class="menu-item">KОНТАКТЫ</a>
             </div>
             <div class="hamburger" id="hamburger-1">
                 <span class="line"></span>
@@ -62,11 +62,15 @@
         </div>
     </div>
     <div class="body-wrapper">
+        <div class="index-button-stack">
+                    <div class="index-button-img" id="recontactOn"> </div>
+                    <div class="index-button-img" id="recallOn"> </div>
+                </div>
         <div class="main-menu">
             <a href="index.html" class="main-menu-item first-menu-item">ГЛАВНАЯ</a>
-            <a href="#" class="main-menu-item">ПРОДУКЦИЯ</a>
-            <a href="#" class="main-menu-item main-menu-item-current">БЛОГ</a>
-            <a href="#" class="main-menu-item">KОНТАКТЫ</a>
+            <a href="production.html" class="main-menu-item">ПРОДУКЦИЯ</a>
+            <a href="blog.html" class="main-menu-item main-menu-item-current">БЛОГ</a>
+            <a href="contacts.html" class="main-menu-item">KОНТАКТЫ</a>
         </div>
         <div class="blog-container container">
             <nav id="breadcrumb" class="breadcrumb">
@@ -167,14 +171,14 @@
                 </div>
             </div>
         </div>
-            <div class="counter container">
-                <a href="#" class="counter-element counter-element-current">1</a>
-                <a href="#" class="counter-element">2</a>
-                <a href="#" class="counter-element">3</a>
-                <a href="#" class="counter-element">4</a>
-                <a href="#" class="counter-element">5</a>
-                <a href="#" class="counter-element">&raquo;</a>
-            </div>
+        <div class="counter container">
+            <a href="#" class="counter-element counter-element-current">1</a>
+            <a href="#" class="counter-element">2</a>
+            <a href="#" class="counter-element">3</a>
+            <a href="#" class="counter-element">4</a>
+            <a href="#" class="counter-element">5</a>
+            <a href="#" class="counter-element">&raquo;</a>
+        </div>
     </div>
     <div class="footer-wrapper">
         <div class="footer container-fluid">
@@ -185,10 +189,10 @@
                         <br>Фотопечать</div>
                 </div>
                 <div class="footer-block footer-block-menu">
-                    <a href="#" class="footer-menu-item">ГЛАВНАЯ</a>
-                    <a href="#" class="footer-menu-item">ПРОДУКЦИЯ</a>
-                    <a href="#" class="footer-menu-item">БЛОГ</a>
-                    <a href="#" class="footer-menu-item">КОНТАКТЫ</a>
+                    <a href="index.html" class="footer-menu-item">ГЛАВНАЯ</a>
+                    <a href="production.html" class="footer-menu-item">ПРОДУКЦИЯ</a>
+                    <a href="blog.html" class="footer-menu-item">БЛОГ</a>
+                    <a href="contacts.html" class="footer-menu-item">КОНТАКТЫ</a>
                 </div>
                 <div class="footer-block footer-block680 footer-block-contact">
                     <div class="contacts-item-stack">
@@ -242,6 +246,27 @@
             </div>
         </div>
     </div>
+    <div class="click-capture" id="close-popup"></div>
+        <div class="recall-block">
+            <div class="recall-block-header">Закажите обратный звонок и наш менеджер свяжется с вами</div>
+            <i class="fa fa-times recall-cross" id="close-popup" aria-hidden="true"></i>
+            <form action="" class="recall-form">
+                <input type="text" class="reacll-name recall-input" placeholder="Ваше имя">
+                <input type="number" class="recall-phone recall-input" placeholder="Ваш номер телефона">
+                <button class="recall-submit" type="submit">Заказать</button>
+            </form>
+        </div>
+        <div class="recontact-block">
+            <div class="recall-block-header">Оформить заявку на замер</div>
+            <i class="fa fa-times recall-cross" id="close-popup" aria-hidden="true"></i>
+            <form action="" class="recall-form recontact-form">
+                <input type="text" class="reacll-name recall-input" placeholder="Ваше имя">
+                <input type="number" class="recall-phone recall-input" placeholder="Ваш номер телефона">
+                <input type="email" class="recall-email recall-input" placeholder="Ваш электронный адресс">
+                <textarea type="text" rowspan="2" class="recall-textarea recall-input" placeholder="Оставить комментарий"></textarea>
+                <button class="recall-submit recontact-submit" type="submit">Отправить</button>
+            </form>
+        </div>
     <link rel="stylesheet" href="css/main.min.css">
     <script src="js/scripts.min.js"></script>
 </body>

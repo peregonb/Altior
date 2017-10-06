@@ -71,7 +71,7 @@
         border-radius: 5px;
     }
     .production {
-        height: 100%;
+        height: auto;
         width: 100%;
     }
     .footer-block-logo {
@@ -91,6 +91,10 @@
 .counter {
     padding-left: 0;
     justify-content: center;
+}
+.contacts-form-block {
+    padding: 0 20px;
+    padding-left: 45px;
 }
 }
 
@@ -139,7 +143,7 @@
         flex-direction: column-reverse;
     }
     .index-bg2 {
-        background-image: linear-gradient(180deg, #ff91c8 0%, #ffe0ef 40%, white 100%);
+        // background-image: linear-gradient(180deg, #ff91c8 0%, #ffe0ef 40%, white 100%);
         background-size: contain;
         height: auto;
     }
@@ -162,7 +166,25 @@
         transition: .3s;
     }
 
-
+.footer-container {
+    padding: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
     .shrink .header-logo {
         vertical-align: top;
         height: 50px;
@@ -181,8 +203,34 @@
     padding-left: 3%;
     padding-right: 3%;
 }
+.contacts-form-block {
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    right: 70px;
+    top: 50%;
+    margin-top: -184px;
 }
-
+.contacts-map-block{
+    width: 100%;
+}
+.contacts-content {
+    flex-flow: row wrap;
+}
+}
+@media only screen and (max-width: 768px) {
+    .contacts-form-block {
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    right: 70px;
+    top: 50%;
+    margin-top: -184px;
+}
+.contacts-map-block{
+    width: 100%;
+}
+}
 @media only screen and (max-width: 680px) {
     .footer-block {
         width: 100%;
@@ -273,6 +321,16 @@
 .counter {
     padding-left: 0;
     justify-content: center;
+}
+.contacts-form-block {
+    position: relative;
+    background-color: #fff;
+    padding: 30px 20px 0;
+    right: 0;
+    top: 0;
+    margin-top: 0;
+    width: 100%;
+    height: auto;
 }
 }
 @media only screen and (max-width: 480px) {
