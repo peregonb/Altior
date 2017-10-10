@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     $('#close-popup').hide();
     $('.recall-block').hide();
     $('.recontact-block').hide();
@@ -436,8 +437,13 @@ $('#prod + .submenu-item').parent().hover(function(e) {
 
 
 
+$(window).on('load', function(){ 
 
-
+        setTimeout(function(){
+            $('#preloader').fadeOut('slow', function () {
+            });
+        },10);
+});
 
 
 

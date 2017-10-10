@@ -96,6 +96,15 @@
     padding: 0 20px;
     padding-left: 45px;
 }
+.production-header {
+    font-size: 27.4px;
+    line-height: 33px;
+}
+.production-hr-wrapper {
+    position: absolute;
+    width: 50%;
+    bottom: 10%;
+}
 }
 
 
@@ -216,6 +225,13 @@
 }
 .contacts-content {
     flex-flow: row wrap;
+}
+.production-box:before {
+    width: 70%;
+}
+.production-box-content {
+    width: 70%;
+    padding: 4% 5% 4% 10%;
 }
 }
 @media only screen and (max-width: 768px) {
@@ -474,6 +490,24 @@
     text-align: center;
     padding: 20px 40px 15px 40px;
 }
+}
+.production-box:before {
+    width: 100%;
+}
+.production-box-content {
+    width: 100%;
+    padding: 50px 5% 4% 10%;
+}
+.production-box {
+    height: 100%;
+    position: relative;
+    top: 0;
+    padding: 0;
+    z-index: 1;
+    width: 100%;
+}
+.production-single{
+    height: 450px;
 }
 }
 
