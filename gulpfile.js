@@ -18,9 +18,10 @@ var gulp           = require('gulp'),
 gulp.task('common-js', function() {
 	return gulp.src([
 		'app/js/common.js',
+		'app/libs/fullpage.js/jquery.fullPage.js',
 		])
 	.pipe(concat('common.min.js'))
-	.pipe(uglify())
+	// .pipe(uglify())
 	.pipe(gulp.dest('app/js'));
 });
 

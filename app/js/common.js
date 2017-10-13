@@ -24,7 +24,8 @@ $(document).ready(function() {
     });
     $('.main-menu').hide();
     $(".hamburger").click(function() {
-        if (!$('.header').hasClass('shrink')) {
+        if (!$('.pre-header').hasClass('pre-header-shrink')) {
+
             $('.header').toggleClass('shrink');
 
         };
@@ -77,12 +78,14 @@ $(function() {
 // });
 
 function calcVH() {
-    // $('.index-bg').innerHeight($(this).innerHeight());
-    // $('.filter').innerHeight($(this).innerHeight());
+
 }
 (function($) {
     calcVH();
     $(window).on('orientationchange', function() {
+        calcVH();
+    });
+        $(window).on('resize', function() {
         calcVH();
     });
 })(jQuery);
@@ -98,6 +101,7 @@ $( document ).ready(function() {
     initBannerVideoSize('.video-container video');
 
     $(window).on('resize', function() {
+      calcVH();
         scaleVideoContainer();
         scaleBannerVideoSize('.video-container .poster img');
         scaleBannerVideoSize('.video-container .filter');
@@ -418,6 +422,11 @@ $(".index-button-stack").stick_in_parent({
 $('.index-bd-wrapper').slick({
   dots: true
 });
+// $('#production-onescroll-slider').slick({
+//   dots: true
+// });
+
+
 $('.submenu-item').hide();
 var test;
 $('#prod + .submenu-item').parent().hover(function(e) {
@@ -435,20 +444,39 @@ $('#prod + .submenu-item').parent().hover(function(e) {
 });
 
 
-
-
+// .onepage-wrapper .section {
+//     width: 100%;
+//     height: 100%;
+// }
+// $('.onepage-wrapper.section ').css("height", "calc(100% - 135px)");
 $(window).on('load', function(){ 
 
         setTimeout(function(){
             $('#preloader').fadeOut('slow', function () {
             });
         },10);
+
+
+function calcVH() {
+var winwidth = $(window).innerWidth();
+var Hh = $('.header').height();
+// $('.production-onescroll-section').innerHeight($(this).innerHeight());
+// $('#section1').innerHeight($(this).innerHeight());
+// $('#section2').innerHeight($(this).innerHeight());
+$('.myContent').innerHeight($(this).innerHeight() - Hh);
+// $('.onescroll-img').innerHeight($(this).innerHeight() - Hh);
+// $('.section').css("max-height", $(this).innerHeight() - Hh);
+}
+(function($) {
+    calcVH();
+    $(window).on('orientationchange', function() {
+        calcVH();
+    });
+        $(window).on('resize', function() {
+        calcVH();
+    });
+})(jQuery);
 });
-
-
-
-
-
 
 
 
