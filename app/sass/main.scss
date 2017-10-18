@@ -402,7 +402,7 @@ i.fa.fa-phone {
     color: white;
     font-family: 'PT Sans', sans-serif;
     font-size: 75px*0.8;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 78px*0.85;
     text-transform: uppercase;
     text-align: center; // padding: 0 5%;
@@ -1796,6 +1796,12 @@ right: 0;
 }
 .about-right-stack {
 padding-top: 50px;
+}
+.bs{
+    font-weight: 800;
+}
+.index-header:hover{
+    color:white;
 }
 
 
