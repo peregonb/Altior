@@ -209,8 +209,7 @@
                 <div class="container footer-container">
                     <div class="footer-block footer-block-logo">
                         <img src="./img/logo.svg" class="header-logo">
-                        <div class="header-text">Интерьерная
-                            <br>Фотопечать</div>
+                        <div class="header-text">Интерьерная<br>Фотопечать</div>
                     </div>
                     <div class="footer-block footer-block-menu">
                         <a href="index.html" class="footer-menu-item">ГЛАВНАЯ</a>
@@ -300,28 +299,21 @@
     var winwidth = $(window).outerWidth();
     var lngipad;
     if (winwidth < 769) {
-        lngipad = 30.58;
+        lngipad = 35.148505;
     } else if (winwidth < 600) {
-        lngipad = 30.52;
+        lngipad = 35.140505;
     } else {
-        lngipad = 30.52;
+        lngipad = 35.146505;
     }
 
     function initMap() {
-        var uluru = { lat: 50.44, lng: 30.52 };
+        var uluru = { lat: 47.848000, lng: 35.146505 };
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 17,
-            center: { lat: 50.44, lng: lngipad },
+            center: { lat: 47.848000, lng: lngipad },
             styles: [{
                     "stylers": [{
                         "hue": "#dd0d0d"
-                    }]
-                },
-                {
-                    "featureType": "road",
-                    "elementType": "labels",
-                    "stylers": [{
-                        "visibility": "off"
                     }]
                 },
                 {
