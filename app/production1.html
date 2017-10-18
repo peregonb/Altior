@@ -15,6 +15,7 @@
     <meta name="msapplication-navbutton-color" content="#000">
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,800&amp;subset=cyrillic" rel="stylesheet">
+    <!-- <link href="./css/onepage-scroll.css" rel="stylesheet"> -->
     <style>
 
     </style>
@@ -27,7 +28,7 @@
     //]]>
     </script>
     <div id="preloader">
- <img src="./img/logo.svg" class="header-logo header-logo-spin ld-spin-fast ld" style="animation-duration:2.5s">
+        <img src="./img/logo.svg" class="header-logo header-logo-spin ld-spin-fast ld" style="animation-duration:2.5s">
     </div>
     <div class="main-wrapper">
         <div class="main-wrapper-content">
@@ -48,21 +49,20 @@
                     </div>
                 </div>
                 <div class="header-second container">
-                    <div class="header-left">
+                    <a href="index.html" class="header-left">
                         <img src="./img/logo.svg" class="header-logo">
-                        <div class="header-text">Интерьерная
-                            <br>Фотопечать</div>
-                    </div>
+                        <div class="header-text">Интерьерная<br>Фотопечать</div>
+                    </a>
                     <div class="header-right">
                         <a href="index.html" class="menu-item">ГЛАВНАЯ</a>
                         <div class="submenu-wrapper">
-                            <a href="production.html" class="menu-item menu-item-current" id="prod">ПРОДУКЦИЯ</a>
+                            <a href="production-main.html" class="menu-item menu-item-current" id="prod">ПРОДУКЦИЯ</a>
                             <div class="submenu-item">
-                                <a href="#" class="submenu-item-single">натяжные потолки<br>с фотопечатью</a>
-                                <a href="#" class="submenu-item-single">тканевые ролеты<br>с фотопечатью</a>
-                                <a href="#" class="submenu-item-single">фотообои</a>
-                                <a href="#" class="submenu-item-single">модульные картины</a>
-                                <a href="#" class="submenu-item-single">рекламные баннеры</a>
+                                <a href="production.html" class="submenu-item-single">натяжные потолки<br>с фотопечатью</a>
+                                <a href="production1.html" class="submenu-item-single">тканевые ролеты<br>с фотопечатью</a>
+                                <a href="production2.html" class="submenu-item-single">фотообои</a>
+                                <a href="production3.html" class="submenu-item-single">модульные картины</a>
+                                <a href="production4.html" class="submenu-item-single">рекламные баннеры</a>
                             </div>
                         </div>
                         <a href="blog.html" class="menu-item">БЛОГ</a>
@@ -76,72 +76,62 @@
                 </div>
             </div>
             <div class="body-wrapper">
-                <div class="index-button-stack">
+                <div class="index-button-stack index-button-stack-production">
                     <div class="index-button-img" id="recontactOn"> </div>
                     <div class="index-button-img" id="recallOn"> </div>
                 </div>
                 <div class="main-menu">
                     <a href="index.html" class="main-menu-item first-menu-item">ГЛАВНАЯ</a>
-                    <a href="production.html" class="main-menu-item main-menu-item-current">ПРОДУКЦИЯ</a>
+                    <a href="production-main.html" class="main-menu-item main-menu-item-current">ПРОДУКЦИЯ</a>
                     <a href="blog.html" class="main-menu-item">БЛОГ</a>
                     <a href="contacts.html" class="main-menu-item">KОНТАКТЫ</a>
                 </div>
-                <div class="blog-container container">
-                    <nav id="breadcrumb" class="breadcrumb">
+                <div class="blog-container blog-container-production container">
+                    <nav id="breadcrumb" class="breadcrumb" style="display:none;">
                         <a href="#" class="breadcrumb-close">Закрыть</a>
                         <a href="#" class="breadcrumb-link">Главная</a>
                         <a href="#breadcrumb" class="breadcrumb--active">Продукция</a>
                     </nav>
                 </div>
-                <div class="mainnn">
-<section>Lorem ipsum dolor sit amet.</section>
-<section>Lorem ipsum dolor sit amet, consectetur.</section>
-</div>
-                <div class="production-wrapper container-fluid">
-                    <div class="production-single container-fluid">
-                        <div class="production-box">
-                            <div class="production-box-content">
-                                <div class="production-header production-block-header">натяжные потолки
-                                    <br>с фотопечатью
-                                </div>
-                                <div class="production-description production-block-description">Небольшое описание тут должно быть написано небольшое описание тут должно быть написано небольшое описание Небольшое описание тут должно быть написано небольшое описание тут должно быть написано небольшое описание Небольшое описание </div>
-                                <div class="production-hr-wrapper">
-                                <div class="production-hr production-block-hr"></div>
-                                <div class="production-excerpt production-block-excerpt">Подробнее →</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="production-single container-fluid">
-                        <div class="production-box">
-                            <div class="production-box-content">
-                                <div class="production-header production-block-header">фотообои
-                                </div>
-                                <div class="production-description production-block-description">Небольшое описание тут должно быть написано небольшое описание тут должно быть написано небольшое описание Небольшое описание тут должно быть написано небольшое описание тут должно быть написано небольшое описание Небольшое описание </div>
-                                <div class="production-hr-wrapper">
-                                <div class="production-hr production-block-hr"></div>
-                                <div class="production-excerpt production-block-excerpt">Подробнее →</div>
+                <div class="production-onescroll" id="fullpage">
+                    <section class="production-onescroll-section fp-auto-height section" id="section0">
+                        <div class="myContent">
+                            <img class="onescroll-img" src="./img/prod2.jpg" alt="фон">
+                            <div class="production-box">
+                                <div class="production-box-content">
+                                    <div class="production-header production-block-header">тканевые ролеты
+                                        <br>с фотопечатью
+                                    </div>
+                                    <div class="production-description production-block-description" id="descriptionScroll">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;Каждому человеку важно иметь жизненное пространство, где он может чувствовать себя уютно и комфортно. С появлением большого количества многоэтажек, которые иногда располагаются одна за другой, получить заветный комфорт не представляется возможным, потому как, выглянув в окно, можно наблюдать жизнь людей соседнего дома. Для того, что бы ваша собственная жизнь была доступна только вам, можно использовать различные меры: <br>
+Повесить шторы и гардины. Вариант уютный и всем хороший, но не открывать шторы днем не получиться, а через гардину зачастую все хорошо видно с улицы; <br>
+Использовать жалюзи. Удобно, но пропускная способность солнечного света у них не слишком высокая, что не подойдет для темных комнат;
+Использование тканевых ролет. Относительно новый вариант, который позволяет подобрать ролеты нужно цвета, фактуры и дизайна, что бы в помещении было достаточно светло, но при этом была возможность спрятаться от внешнего мира. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Сами по себе <b>тканевые ролеты</b> известны достаточно давно, но ранее они имели достаточно скучный вид, были однотонными и фактурные вариации были очень скромные. Сейчас же есть возможность разнообразить интерьер используя <b>тканевые ролеты с рисунком.</b> Варианты рисунков можно посмотреть на нашем сайте, и подобрать тот, который придется по душе. Существует возможность печати любого рисунка, который вы пожелаете, главное, что бы он имел хорошее качество.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Еще одной возможностью создать оригинальный интерьер являются <b>тканевые ролеты с фотопечатью.</b> Наша компания предлагает широкий ассортимент такой продукции с самыми различными изображениями. Варианты рисунка формирует спрос, на который мы ориентируемся, но любое пожелание клиента без труда можно выполнить.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Создавая свой неповторимый антураж, индивидуальный вид помещения, вы в силах подобрать именно тот рисунок или фотографию, которая больше всего будет отвечать поставленной задаче. Такие ролеты могут служить замечательным подарком, если вы знаете о необходимости такой детали вашему родственнику или другу. Хорошо они впишутся и в рабочую обстановку, если вы их закажите для офисного помещения.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;Заказать и приобрести тканевые ролеты любой сложности и с изобилием рисунков можно как в Запорожье, так и в любом городе Украины. У нас вы получите высокое качество и приемлемые цены, хорошее обслуживание и индивидуальный подход к каждому клиенту.
+                                    </div>
+                                    <div class="production-hr-wrapper">
+                                        <div class="production-hr production-block-hr"></div>
+                                        <div class="production-excerpt production-block-excerpt">Подробнее →</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="production-single container-fluid">
-                        <div class="production-box">
-                            <div class="production-box-content">
-                                <div class="production-header production-block-header">модульные картины
-                                </div>
-                                <div class="production-description production-block-description">Небольшое описание тут должно быть написано небольшое описание тут должно быть написано небольшое описание Небольшое описание тут должно быть написано небольшое описание тут должно быть написано небольшое описание Небольшое описание </div>
-                                <div class="production-hr-wrapper">
-                                <div class="production-hr production-block-hr"></div>
-                                <div class="production-excerpt production-block-excerpt">Подробнее →</div>
-                                </div>
-                            </div>
+                    </section>
+                    <section class="production-onescroll-section section" id="section1">
+                        <div id="production-onescroll-slider">
+                        <div class="production-onescroll-singleSlide">
+                            <img src="./img/prod14.jpg" alt="фон" class="production-onescroll-singleImage">
                         </div>
-                    </div>
+                        
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
-        <div class="footer-wrapper">
+        <div class="footer-wrapper" style="display: none;">
             <div class="footer container-fluid">
                 <div class="container footer-container">
                     <div class="footer-block footer-block-logo">
@@ -151,7 +141,7 @@
                     </div>
                     <div class="footer-block footer-block-menu">
                         <a href="index.html" class="footer-menu-item">ГЛАВНАЯ</a>
-                        <a href="production.html" class="footer-menu-item">ПРОДУКЦИЯ</a>
+                        <a href="production-main.html" class="footer-menu-item">ПРОДУКЦИЯ</a>
                         <a href="blog.html" class="footer-menu-item">БЛОГ</a>
                         <a href="contacts.html" class="footer-menu-item">КОНТАКТЫ</a>
                     </div>
@@ -230,12 +220,16 @@
         </div>
     </div>
     <link rel="stylesheet" href="css/main.min.css">
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoGWD1vC_AeAtojggZKDLPH0SbZTqujBg&callback=initMap">
-    </script>
-    <!-- <script src="libs/onepage-scroll/jquery.onepage-scroll.js"></script> -->
-    
     <script src="js/scripts.min.js"></script>
+    <!-- // <script src="libs/onepage-scroll/jquery.onepage-scroll.js"></script> -->
     <script>
+    // $(".production-onescroll").onepage_scroll();
+    $('.production-onescroll').fullpage({
+        anchors: ['firstPage', 'secondPage', '3rdPage'],
+        verticalCentered: true,
+        navigation: true,
+        navigationPosition: 'right'
+    });
     var winwidth = $(window).outerWidth();
     var lngipad;
     if (winwidth < 769) {

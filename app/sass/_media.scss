@@ -105,6 +105,13 @@
     width: 50%;
     bottom: 10%;
 }
+.contacts-adresses{
+            flex-flow: row wrap;
+}
+.contacts-adress-stack {
+    width: 100%;
+    padding: 15px;
+}height: auto!important;
 }
 
 
@@ -232,6 +239,22 @@
 .production-box-content {
     width: 70%;
     padding: 4% 5% 4% 10%;
+}
+.production-img1:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    border: none;
+    border-right: none;
+}
+.production-img2:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 20%;
+    border: none;
+    border-left: none;
 }
 }
 @media only screen and (max-width: 768px) {
@@ -511,6 +534,9 @@
 }
 .blog-container-production{
   margin-top: 95px;
+}
+#descriptionScroll {
+    height: calc(100% - 215px);
 }
 }
 

@@ -35,11 +35,11 @@
     transform: translate(0, -50%);
 
     cursor: pointer;
-
+font-weight: 200;
     color: transparent;
     border: none;
     outline: none;
-    background: transparent;
+    
 }
 .slick-prev:hover,
 .slick-prev:focus,
@@ -48,7 +48,7 @@
 {
     color: transparent;
     outline: none;
-    background: transparent;
+    
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,

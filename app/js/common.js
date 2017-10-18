@@ -422,9 +422,9 @@ $(".index-button-stack").stick_in_parent({
 $('.index-bd-wrapper').slick({
   dots: true
 });
-// $('#production-onescroll-slider').slick({
-//   dots: true
-// });
+$('#production-onescroll-slider').slick({
+  dots: false
+});
 
 
 $('.submenu-item').hide();
@@ -450,7 +450,14 @@ $('#prod + .submenu-item').parent().hover(function(e) {
 // }
 // $('.onepage-wrapper.section ').css("height", "calc(100% - 135px)");
 $(window).on('load', function(){ 
+$('#descriptionScroll').on( 'touchmove mousewheel DOMMouseScroll', !function (e) { 
+  
+  var e0 = e.originalEvent;
+  var delta = e0.wheelDelta || -e0.detail || -e0.touches[0].pageY;
 
+  this.scrollTop += ( delta < 0 ? 1 : -1 ) * 5;
+  e.preventDefault();  
+});
         setTimeout(function(){
             $('#preloader').fadeOut('slow', function () {
             });
@@ -464,6 +471,7 @@ var Hh = $('.header').height();
 // $('#section1').innerHeight($(this).innerHeight());
 // $('#section2').innerHeight($(this).innerHeight());
 $('.myContent').innerHeight($(this).innerHeight() - Hh);
+$('.production-onescroll-singleImage').innerHeight($(this).innerHeight() - Hh);
 // $('.onescroll-img').innerHeight($(this).innerHeight() - Hh);
 // $('.section').css("max-height", $(this).innerHeight() - Hh);
 }
@@ -477,11 +485,42 @@ $('.myContent').innerHeight($(this).innerHeight() - Hh);
     });
 })(jQuery);
 });
+$('#descriptionScroll').on( 'touchmove mousewheel DOMMouseScroll', function (e) { 
+  var Bh2 = $(window).outerHeight();
+  var e0 = e.originalEvent;
+  var delta = e0.wheelDelta || -e0.detail || -e0.touches[0].pageY ;
+
+  this.scrollTop += ( delta < 0 ? 1 : -1 ) * 5;
+console.log(delta);
+  e.preventDefault();  
+});
+// $('#descriptionScroll1').on( 'touchmove mousewheel DOMMouseScroll', function (e) { 
+//   var Bh2 = $(window).outerHeight();
+//   var e0 = e.originalEvent;
+//   var delta = e0.wheelDelta || -e0.detail || -e0.touches[0].pageY ;
+
+//   this.scrollTop += ( delta < 0 ? 1 : -1 ) * 5;
+// console.log(delta);
+//   e.preventDefault();  
+// });
+
+(function($){
+        $(window).on("load",function(){
+            $("#descriptionScroll").mCustomScrollbar();
+            // $("#descriptionScroll1").mCustomScrollbar();
+        });
+    })(jQuery);
 
 
-
-
-
+// $("body").on('touchmove', function(event) {
+//   event.preventDefault();
+//   var delta;
+//   if (!event.originalEvent.touches[0].pageY) {
+//     return false;
+//   }
+//   delta = (event.originalEvent.touches[0].pageY - 7) - $(".move-block").offset().top;
+//   resizableBlock(delta);
+// });
 
 
 
