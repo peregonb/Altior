@@ -109,7 +109,13 @@ $( document ).ready(function() {
     });
 
 });
-
+$(window).on('resize', function() {
+      calcVH();
+        scaleVideoContainer();
+        scaleBannerVideoSize('.video-container .poster img');
+        scaleBannerVideoSize('.video-container .filter');
+        scaleBannerVideoSize('.video-container video');
+    });
 function scaleVideoContainer() {
 
     var height = $(window).height() + 5;
